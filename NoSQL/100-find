@@ -1,0 +1,2 @@
+// Find schools whose names start with Holberton
+db.school.find({ name: /^Holberton/ });
