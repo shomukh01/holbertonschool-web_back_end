@@ -51,7 +51,10 @@ class Server:
         for key in keys[:page_size]:
             data.append(indexed[key])
 
-        next_index = keys[page_size - 1] + 1 if len(keys) >= page_size else None
+        if data:
+            next_index = keys[len(data) - 1] + 1
+        else:
+            next_index = index
         return {
             "index": index,
             "data": data,
