@@ -1,5 +1,5 @@
 export default function cleanSet(set, startString) {
-  if (!startString || !(set instanceof Set)) {
+  if (typeof startString !== 'string' || !startString || !(set instanceof Set)) {
     return '';
   }
 
@@ -8,4 +8,3 @@ export default function cleanSet(set, startString) {
     .map((value) => value.slice(startString.length))
     .join('-');
 }
-
