@@ -21,3 +21,11 @@ This directory contains the tasks for the Holberton School Node.js basics projec
 ## Task 4: Creating a basic HTTP server
 
 `4-http.js` exports an HTTP server that responds to every request with `Hello Holberton School!` as plain text and listens on port 1245 when run directly.
+
+## Task 5: Extending the HTTP server
+
+`5-http.js` responds to `/` with the greeting and `/students` with the student summary from the CSV path supplied as the first command-line argument.
+
+## Task 6: Creating an HTTP server with Express
+
+`6-http_express.js` exports an Express app that responds to `GET /` with the plain-text greeting and listens on port 1245. Express handles unknown routes with its default 404 response.
