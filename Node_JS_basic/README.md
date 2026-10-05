@@ -17,3 +17,7 @@ This directory contains the tasks for the Holberton School Node.js basics projec
 ## Task 3: Reading a CSV file asynchronously
 
 `3-read_file_async.js` exports `countStudents(path)`, which reads the student CSV asynchronously and returns a Promise that resolves after printing the same student summary or rejects if the file cannot be read.
+
+## Task 4: Creating a basic HTTP server
+
+`4-http.js` exports an HTTP server that responds to every request with `Hello Holberton School!` as plain text and listens on port 1245 when run directly.
