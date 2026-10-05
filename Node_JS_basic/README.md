@@ -5,3 +5,15 @@ This directory contains the tasks for the Holberton School Node.js basics projec
 ## Task 0: Executing basic JavaScript with Node.js
 
 `0-console.js` exports `displayMessage(message)`, which prints the supplied message to STDOUT.
+
+## Task 1: Reading from standard input
+
+`1-stdin.js` reads a name from standard input and prints it with the closing message.
+
+## Task 2: Reading a CSV file synchronously
+
+`2-read_file.js` exports `countStudents(path)`, which reads the student CSV, prints the total and each field's count and first-name list, and throws if the file cannot be read.
+
+## Task 3: Reading a CSV file asynchronously
+
+`3-read_file_async.js` exports `countStudents(path)`, which reads the student CSV asynchronously and returns a Promise that resolves after printing the same student summary or rejects if the file cannot be read.
