@@ -2,6 +2,8 @@
 
 This directory contains the tasks for the Holberton School Node.js basics project.
 
+The project uses Babel and ESLint configuration files, and its npm manifest includes Express for Task 6. Use `npm install` to install its dependencies; the available npm scripts are `npm test`, `npm run dev`, and `npm run lint`.
+
 ## Task 0: Executing basic JavaScript with Node.js
 
 `0-console.js` exports `displayMessage(message)`, which prints the supplied message to STDOUT.
