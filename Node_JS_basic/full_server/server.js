@@ -1,9 +1,9 @@
-const express = require('express');
-const routes = require('./routes');
+import express from 'express';
+import routes from './routes/index.js';
 
 const app = express();
 
 app.use(routes);
 app.listen(1245);
 
-module.exports = app;
+export default app;

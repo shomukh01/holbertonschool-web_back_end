@@ -1,7 +1,7 @@
-const fs = require('fs');
+import { readFile } from 'fs/promises';
 
 async function readDatabase(path) {
-  const contents = await fs.promises.readFile(path, 'utf8');
+  const contents = await readFile(path, 'utf8');
   const rows = contents
     .split(/\r?\n/)
     .slice(1)
@@ -19,4 +19,4 @@ async function readDatabase(path) {
   return students;
 }
 
-module.exports = readDatabase;
+export default readDatabase;

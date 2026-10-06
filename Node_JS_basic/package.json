@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "test": "jest",
-    "dev": "nodemon --exec babel-node full_server/server.js",
+    "dev": "nodemon --exec babel-node ./full_server/server.js ./database.csv",
     "lint": "eslint ."
   },
   "dependencies": {

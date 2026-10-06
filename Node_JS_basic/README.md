@@ -38,4 +38,4 @@ The project uses Babel and ESLint configuration files, and its npm manifest incl
 
 ## Task 8: Organizing a full Express server
 
-`full_server/server.js` starts an Express server on port 1245. Its routes serve the homepage, a CSV-backed student summary, and student lists by major. The CSV path is supplied as the first command-line argument. Start the development server from this directory with `npm run dev`.
+`full_server/server.js` starts an Express server on port 1245 and exports the app as the default export. Its routes serve the homepage, a CSV-backed student summary, and student lists by major (fields ordered alphabetically without case sensitivity). Unsupported majors return status 500 with `Major parameter must be CS or SWE`. The CSV path is supplied as the first command-line argument. Start the development server from this directory with `npm run dev`; the script supplies `./database.csv`.

@@ -1,10 +1,12 @@
-const readDatabase = require('../utils');
+import readDatabase from '../utils.js';
 
 class StudentsController {
   static getAllStudents(request, response) {
     readDatabase(process.argv[2])
       .then((students) => {
-        const fields = Object.keys(students).sort();
+        const fields = Object.keys(students).sort((first, second) => (
+          first.toLowerCase().localeCompare(second.toLowerCase())
+        ));
         const totalStudents = fields.reduce(
           (total, field) => total + students[field].length,
           0,
@@ -28,14 +30,14 @@ class StudentsController {
     const { major } = request.params;
 
     if (major !== 'CS' && major !== 'SWE') {
-      response.status(404).send('Major not found');
+      response.status(500).send('Major parameter must be CS or SWE');
       return;
     }
 
     readDatabase(process.argv[2])
       .then((students) => {
         if (!students[major]) {
-          response.status(404).send('Major not found');
+          response.status(500).send('Major parameter must be CS or SWE');
           return;
         }
 
@@ -47,4 +49,4 @@ class StudentsController {
   }
 }
 
-module.exports = StudentsController;
+export default StudentsController;
