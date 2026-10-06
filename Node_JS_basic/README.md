@@ -35,3 +35,7 @@ The project uses Babel and ESLint configuration files, and its npm manifest incl
 ## Task 7: Extending the Express server
 
 `7-http_express.js` serves the greeting at `GET /` and the student summary from the CSV path supplied as the first command-line argument at `GET /students`. It listens on port 1245.
+
+## Task 8: Organizing a full Express server
+
+`full_server/server.js` starts an Express server on port 1245. Its routes serve the homepage, a CSV-backed student summary, and student lists by major. The CSV path is supplied as the first command-line argument. Start the development server from this directory with `npm run dev`.
