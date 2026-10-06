@@ -31,3 +31,7 @@ The project uses Babel and ESLint configuration files, and its npm manifest incl
 ## Task 6: Creating an HTTP server with Express
 
 `6-http_express.js` exports an Express app that responds to `GET /` with the plain-text greeting and listens on port 1245. Express handles unknown routes with its default 404 response.
+
+## Task 7: Extending the Express server
+
+`7-http_express.js` serves the greeting at `GET /` and the student summary from the CSV path supplied as the first command-line argument at `GET /students`. It listens on port 1245.
